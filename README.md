@@ -46,6 +46,31 @@ nix develop
 - Nix with flakes enabled
 - Git
 
+## Using Templates
+
+### Using with nix flake init (recommended)
+Initialize a new project directly from the templates:
+```bash
+nix flake init -t git+ssh://git@github.com:daschinmoy21/nix-template.git#rust
+nix develop
+```
+
+### Using from cloned repository
+If you've cloned this repository locally:
+```bash
+git clone git@github.com:daschinmoy21/nix-template.git
+cd nix-template
+nix develop
+```
+
+Or initialize a new project from the local template:
+```bash
+git clone git@github.com:daschinmoy21/nix-template.git
+nix flake init -t ./nix-template#rust
+cd <your-project-dir>
+nix develop
+```
+
 ## Supported Systems
 All templates support:
 - x86_64-linux
